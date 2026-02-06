@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    
+    <!-- SEO Specific to EMI -->
+    <title>EMI Calculator - Loan Monthly Payment | CalcHub</title>
+    <meta name="description" content="Calculate your Equated Monthly Installment (EMI) for home, car, or personal loans. Standard reducing balance formula.">
+    
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+    <header>
+        <div class="header-content">
+            <a href="index.html" class="logo">⚡ CalcHub</a>
+            <nav>
+                <a href="salary.html" class="nav-link">Salary</a>
+                <a href="emi.html" class="nav-link active">EMI</a>
+            </nav>
+        </div>
+    </header>
+
+    <div class="main-wrapper">
+        <div class="calc-container">
+            <h1 class="page-title">EMI Calculator</h1>
+            <p class="page-desc">Calculate standard loan repayments.</p>
+
+            <!-- Calculator Inputs -->
+            <div class="input-group">
+                <label>Currency</label>
+                <select id="e_currency"><option value="$">USD ($)</option><option value="₹">INR (₹)</option></select>
+            </div>
+            <div class="input-group"><label>Loan Amount</label><input type="number" id="e_amount" placeholder="e.g. 10000"></div>
+            <div class="flex-row input-group">
+                <div class="flex-col"><label>Interest Rate (% P.A.)</label><input type="number" id="e_rate" placeholder="e.g. 10"></div>
+                <div class="flex-col"><label>Tenure (Months)</label><input type="number" id="e_months" placeholder="e.g. 12"></div>
+            </div>
+            <button class="btn-calc" onclick="calcEMI()">Calculate EMI</button>
+            <div class="result-box" id="e_result"></div>
+        </div>
+
+        <!-- SEO Content -->
+        <article class="seo-article">
+            <h2>Understanding Loan EMI</h2>
+            <p>EMI stands for Equated Monthly Installment. It is the fixed amount you pay to the bank every month to repay your loan.</p>
+            <h3>How is it calculated?</h3>
+            <p>We use the standard reducing balance method used by most banks. The formula accounts for the principal amount, the annual interest rate, and the loan tenure in months.</p>
+        </article>
+    </div>
+
+    <footer>
+        <p class="copyright">© 2024 CalcHub. All rights reserved.</p>
+    </footer>
+
+    <script src="script.js"></script>
+</body>
+</html>

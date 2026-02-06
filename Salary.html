@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    
+    <!-- SEO Specific to Salary -->
+    <title>Salary Calculator - Convert Hourly to Yearly | CalcHub</title>
+    <meta name="description" content="Calculate your annual salary from your hourly wage. See breakdown for weekly, monthly, and yearly income instantly.">
+    
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+    <header>
+        <div class="header-content">
+            <a href="index.html" class="logo">⚡ CalcHub</a>
+            <nav>
+                <a href="salary.html" class="nav-link active">Salary</a>
+                <a href="emi.html" class="nav-link">EMI</a>
+            </nav>
+        </div>
+    </header>
+
+    <div class="main-wrapper">
+        <div class="calc-container">
+            <h1 class="page-title">Salary Calculator</h1>
+            <p class="page-desc">Convert hourly wage to yearly income.</p>
+            
+            <!-- Calculator Inputs -->
+            <div class="input-group">
+                <label>Currency</label>
+                <select id="s_currency">
+                    <option value="$">USD ($)</option>
+                    <option value="€">EUR (€)</option>
+                    <option value="₹">INR (₹)</option>
+                </select>
+            </div>
+            <div class="input-group"><label>Hourly Wage</label><input type="number" id="s_wage" placeholder="25"></div>
+            <div class="flex-row input-group">
+                <div class="flex-col"><label>Hrs/Day</label><input type="number" id="s_hours" placeholder="8"></div>
+                <div class="flex-col"><label>Days/Week</label><input type="number" id="s_daysWeek" placeholder="5" max="7"></div>
+            </div>
+            <div class="input-group"><label>Specific Months (Optional)</label><input type="number" id="s_months" placeholder="e.g. 6" min="1" max="12"></div>
+            
+            <button class="btn-calc" onclick="calcSalary()">Calculate Salary</button>
+            <div class="result-box" id="s_result"></div>
+        </div>
+
+        <!-- SEO Content -->
+        <article class="seo-article">
+            <h2>How to use the Salary Calculator</h2>
+            <p>This tool helps freelancers, contractors, and hourly employees understand their gross income. By inputting your hourly rate and working schedule, we calculate your total earnings.</p>
+            <h3>The Formula</h3>
+            <ul>
+                <li><strong>Weekly:</strong> Wage × Hours × Days</li>
+                <li><strong>Yearly:</strong> Weekly Pay × 52 Weeks</li>
+                <li><strong>Monthly:</strong> Yearly Pay ÷ 12 Months</li>
+            </ul>
+        </article>
+    </div>
+
+    <footer>
+        <p class="copyright">© 2024 CalcHub. All rights reserved.</p>
+    </footer>
+
+    <script src="script.js"></script>
+</body>
+</html>
